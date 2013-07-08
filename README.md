@@ -24,7 +24,8 @@ Downloading
 -----------
 The Bitcraze VM can either be downloaded via torrent or via direct download:
 
-* [Bitcraze Raspian image](https://mega.co.nz/#!HJpH2KDJ!bY-EdGtyxIRzOUu6xNVWnid_cco5wS-IQ6ELfc5Y1Q8 "Direct download") (limited to 6 simultanious downloads)
+* Bitcraze Raspian image 0.1 [torrent](http://tracker.bitcraze.se/torrents/cfpi-0_1.zip.torrent "Direct download") (prefered)
+* Bitcraze RAspian image 0.1 [direct download](https://mega.co.nz/#!HJpH2KDJ!bY-EdGtyxIRzOUu6xNVWnid_cco5wS-IQ6ELfc5Y1Q8 "Direct download") (limited to 6 simultanious downloads)
 
 How do I use it?
 ----------------
