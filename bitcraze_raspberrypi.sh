@@ -2,7 +2,7 @@ set -x
 
 CLIENT_VERSION=2014.12.3
 
-#inctall required packages
+#install required packages
 sudo apt-get update
 sudo apt-get -y install python-usb xboxdrv
 
@@ -34,13 +34,13 @@ cat > cfheadless << __EOF__
 if test "\$ACTION" = "add"
 then
         /usr/bin/sudo -u pi /home/pi/start_cfheadless &
-        echo $! > /tmp/cfheadless.pid
+        echo \$! > /tmp/cfheadless.pid
 else
         killall -9 cfheadless
         if test -f /tmp/cfheadless.pid
         then
-                PID=`cat /tmp/cfheadless.pid`
-                kill -9 $PID
+            PID=\$(cat /tmp/cfheadless.pid)
+                kill -9 \$PID
         fi
 fi
 __EOF__
@@ -49,7 +49,7 @@ sudo chmod +x /root/bin/cfheadless
 
 cat > xbox360 << __EOF__
 #!/bin/sh
-if test "$ACTION" = "add"
+if test "\$ACTION" = "add"
 then
         /usr/bin/xboxdrv &
 else
@@ -64,5 +64,6 @@ cat > start_cfheadless << __EOF__
 __EOF__
 chmod +x start_cfheadless
 
+#Create default configuration
 echo PS3_Mode_1 > /home/pi/controller.conf
 echo radio://0/10/250K > /home/pi/link.conf
