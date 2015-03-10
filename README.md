@@ -10,15 +10,17 @@ There's a list of what's included:
 
 * crazyflie-clients-python and crazyradio-firmware pre-cloned
 
-* pyusb and pygame
+* pyusb
 
 * UDEV rules to automatically launch the cfheadless client when Crazyradio is plugged in
 
 * Driver for the Xbox 360 wireless controller and automatic start of the utilities
 
-* Mercurial/Git
+* Git
 
 For more info see our [wiki](http://wiki.bitcraze.se/projects:crazyflie:binaries:raspberrypi "Bitcraze Wiki") and [hacks page](http://wiki.bitcraze.se/projects:crazyflie:hacks:rasberrypi "Raspberry hack page").
+
+The image is generated from the raspberrypi.org release of Rasbian and by running bitctaze_raspberrypi.sh as pi user.
 
 Downloading
 -----------
@@ -29,7 +31,7 @@ The Bitcraze VM can either be downloaded via torrent or via direct download:
 
 How do I use it?
 ----------------
-First of all you need to set up what controller and link settings you are using. This is done by editing the two files in the folder /home/bitcraze named controller.conf and link.conf. They should only contain one row each.
+First of all you need to set up what controller and link settings you are using. This is done by editing the two files in the folder /home/pi named controller.conf and link.conf. They should only contain one row each.
 
 To fly first insert the USB controller, then power on the Crazyflie and lastly insert the Crazyradio. This will start the cfheadless client and connect to the Crazyflie. In a few seconds you sould be ready to fly.
 
@@ -41,7 +43,7 @@ Flashing the Crazyradio
 -----------------------
 The Crazyradio firmware can be updated using the Raspberry Pi and doing the following steps:
 * Connect the Raspberry Pi to your local network
-* Power it on and SSH to it (user=bitcraze and password=crazyflie)
+* Power it on and SSH to it (user=raspberry and password=pi)
 * Make sure that no controller is connected
 * Insert the Crazyradio into a USB port on the Raspberry Pi
 * Go into the crazyradio-firmware directory and download a firmware update
@@ -57,11 +59,11 @@ python usbtools/nrfbootload.py flash cradio-0.52.bin
 * Make sure that the flashing is successful, otherwise retry again!
 * Unplug the Crazyradio and re-insert it again. It's now running the new firmware.
 
-Flashing the Crazyflie
-----------------------
+Flashing the Crazyflie 1
+------------------------
 The Crazyflie firmware can be updated using the Raspberry Pi and doing the following steps:
 * Connect the Raspberry Pi to your local network
-* Power it on and SSH to it (user=bitcraze and password=crazyflie)
+* Power it on and SSH to it (user=pi and password=raspberry)
 * Make sure that no controller is connected
 * Insert the Crazyradio into a USB port on the Raspberry Pi
 * Go into the crazyflie-clients-python directory and download a firmware update
@@ -88,7 +90,7 @@ Logging in
 ----------
 There's a new user created that can be used to log in:
 ```
-User: bitcraze
-Pass: crazyflie
+User: pi
+Pass: raspberry
 ```
 
