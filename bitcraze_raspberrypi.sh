@@ -60,7 +60,7 @@ sudo mv xbox360 /root/bin/xbox360
 sudo chmod +x /root/bin/xbox360
 
 cat > start_cfheadless << __EOF__
-/home/pi/projects/crazyflie-clients-python/bin/cfheadless -u `cat /home/pi/link.conf` -i `cat /home/pi/controller.conf` > /tmp/cfheadless.log 2>&1
+/home/pi/projects/crazyflie-clients-python/bin/cfheadless -u \$(cat /home/pi/link.conf) -i \$(cat /home/pi/controller.conf) > /tmp/cfheadless.log 2>&1
 __EOF__
 chmod +x start_cfheadless
 
