@@ -1,5 +1,7 @@
 # Bitcraze pre-installed Raspian SD-card image 
 
+**This repo is not currently being maintained**
+
 This project is for Bitcraze pre-installed Raspian SD-card image but doesn't contain any code or image, it's used for tracking issues and improvements.
 
 The SD-card image is based on the Wheezy version of Raspian for the Raspberry Pi. Nothing it removed from the image so you can use it for anything that you could use the origional image for. We have just added our stuff on top of it.
