@@ -96,3 +96,6 @@ User: pi
 Pass: raspberry
 ```
 
+## Contribute
+
+Go to the [contribute page](https://www.bitcraze.io/contribute/) on our website to learn more.
